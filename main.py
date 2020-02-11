@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request, jsonify
 
 AppName = "FlaskTest"
 
@@ -10,3 +10,6 @@ app = create_app()
 @app.route("/")
 def index():
   return "Hello World!"
+
+if __name__ == "__main__":
+  app.run(threaded=True, port=5000)
